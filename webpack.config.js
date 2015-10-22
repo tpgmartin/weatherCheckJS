@@ -6,7 +6,15 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" }
+            { test: /\.js$/, loader: 'babel-loader' },
+            { test: /\.json$/, loader: 'json-loader' },
+            { test: /\.css$/, loader: 'style!css' }
         ]
+    },
+    node: {
+        console: true,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     }
 };
